@@ -12,23 +12,16 @@ int main()
         s.insert(c);
     }
 
-    int flag = 0;
-    int i = 0;
-    for (auto it = s.begin(); it != s.end(); it++)
+    for (char ch = 'a'; ch <= 'z'; ch++)
     {
-        if (*it != (i + 'a'))
+        if (s.find(ch) == s.end())
         {
-            cout << (char)(i + 'a');
-            flag = 1;
-            break;
+            cout << ch << '\n';
+            return 0;
         }
-        i++;
     }
 
-    if (!flag && i < 25)
-        cout << (char)(i + 'a');
-    else if (!flag)
-        cout << "None";
+    cout << "None\n";
 
     return 0;
 }
