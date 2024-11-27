@@ -31,7 +31,7 @@ int main()
             continue;
         }
 
-        int ans = 0, sum = 0;
+        int cnt = 0, sum = 0;
         int l = 0, r = 0;
         int cnt_0 = 0;
         while (r < n)
@@ -39,7 +39,7 @@ int main()
             sum += a[r];
             if (sum == s)
             {
-                ans = max(ans, r - l + 1);
+                cnt = max(cnt, r - l + 1);
             }
             else
             {
@@ -51,7 +51,8 @@ int main()
             }
             r++;
         }
-        cout << n - ans << '\n';
+        int ans = n - cnt;
+        cout << ans << '\n';
     }
 
     return 0;
